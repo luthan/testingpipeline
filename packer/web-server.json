@@ -1,15 +1,11 @@
 {
   "variables": {
-    "aws_access_key": "",
-    "aws_secret_key": "",
     "aws_region": "eu-central-1",
     "working_dir": "{{env `WORKINGDIR`}}"
   },
   "builders": [
     {
       "type": "amazon-ebs",
-      "access_key": "{{user `aws_access_key`}}",
-      "secret_key": "{{user `aws_secret_key`}}",
       "region": "{{user `aws_region`}}",
       "source_ami_filter": {
         "filters": {
