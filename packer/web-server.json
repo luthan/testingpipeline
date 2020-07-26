@@ -39,7 +39,7 @@
     {
       "type": "shell",
       "inline" : [
-         "sudo cp web/index.html /var/www/index.html"
+         "sudo cp ../web/index.html /var/www/index.html"
       ]
      }
   ],
