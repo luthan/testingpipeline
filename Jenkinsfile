@@ -8,10 +8,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'echo $WORKINGDIR'
-                sh 'ansible-galaxy install geerlingguy.apache'
+                sh 'sudo ansible-galaxy install geerlingguy.apache'
                 dir ('packer'){
-                    sh 'packer build web-server.json'
+                    sh 'sudo packer build web-server.json'
                 }
             }
         }
