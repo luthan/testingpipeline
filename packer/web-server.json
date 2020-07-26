@@ -39,7 +39,7 @@
     },
     {
       "type": "file",
-      "source" : "web/index.html",
+      "source" : "{{user `working_dir`}}/web/index.html",
       "destination": "/var/www/index.html"
      }
   ],
