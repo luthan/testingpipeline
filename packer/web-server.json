@@ -38,10 +38,9 @@
      "playbook_file": "web-server.yml"
     },
     {
-      "type": "shell",
-      "inline" : [
-         "sudo cp {{user `working_dir`}}/web/index.html /var/www/index.html"
-      ]
+      "type": "file",
+      "source" : "web/index.html",
+      "destination": "/var/www/index.html"
      }
   ],
   "post-processors": [
