@@ -2,7 +2,12 @@
 - hosts: all
   become: yes
   become_method: sudo
-  vars:
-  roles:
-  - geerlingguy.apache
-
+  tasks:
+  - name: ensure latest apache is installed
+    apt:
+      name: httpd
+      state: latest
+  - name: ensure apache is running
+    service:
+      name: httpd
+      state: started
