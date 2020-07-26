@@ -2,7 +2,8 @@
   "variables": {
     "aws_access_key": "",
     "aws_secret_key": "",
-    "aws_region": "eu-central-1"
+    "aws_region": "eu-central-1",
+    "working_dir": "{{env `WORKINGDIR`}}"
   },
   "builders": [
     {
@@ -39,7 +40,7 @@
     {
       "type": "shell",
       "inline" : [
-         "sudo pwd && sudo cp ../web/index.html /var/www/index.html"
+         "sudo cp {{user `working_dir`}}/web/index.html /var/www/index.html"
       ]
      }
   ],
