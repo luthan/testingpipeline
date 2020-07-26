@@ -1,10 +1,13 @@
 pipeline {
     agent any
 
+    environment {
+        WORKINGDIR = pwd()
+    }
+
     stages {
         stage('Build') {
             steps {
-                sh 'export WORKINGDIR=`echo pwd`'
                 sh 'echo $WORKINGDIR'
                 sh 'ansible-galaxy install geerlingguy.apache'
                 dir ('packer'){
