@@ -39,6 +39,7 @@
     {
       "type": "shell",
       "inline" : [
+         "sudo pwd",         
          "sudo cp ../web/index.html /var/www/index.html"
       ]
      }
