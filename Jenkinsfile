@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                cp README.md /tmp/hahahahaha
+                sh 'cp README.md /tmp/hahahahaha'
             }
         }
     }
