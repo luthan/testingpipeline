@@ -34,7 +34,7 @@
     },
     {
      "type": "ansible",
-     "playbook_file": "./web-server.yml"
+     "playbook_file": "web-server.yml"
     },
     {
       "type": "shell",
