@@ -39,8 +39,8 @@
     },
     {
       "type": "file",
-      "source" : "{{user `working_dir`}}/web/index.html",
-      "destination": "/var/www/index.html"
+      "source" : "{{user `working_dir`}}/web",
+      "destination": "/tmp/web"
      }
   ],
   "post-processors": [
