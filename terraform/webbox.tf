@@ -21,8 +21,9 @@ provider "aws" {
 }
 
 resource "aws_instance" "webbox" {
-  instance_type        = "t2.micro"
-  ami                  = data.aws_ami.webami.id
+  name          = "webbox"
+  instance_type = "t2.micro"
+  ami           = data.aws_ami.webami.id
 }
 
 output "ip_address" {
