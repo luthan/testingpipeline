@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'cp README.md /tmp/hahahahaha'
+                sh 'ansible-galaxy install geerlingguy.apache'
+                sh 'packer build packer/web-server.json'
             }
         }
     }
